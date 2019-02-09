@@ -7,3 +7,4 @@ foreign key(patient_id) references patient(patient_id));
 3.create table schedule(schedule_id int(5) auto_increment,doctor_id int(5),start_time time, end_time time,primary key(schedule_id),foreign key(doctor_id) references doctor(doctor_id));
 
 4.alter table appointment change appointment_time start_time time; 
+5.alter table appointment add end_time time;
