@@ -1,0 +1,8 @@
+1.create table doctor(doctor_id int(5) auto_increment,name varchar(20),specialty varchar(10),primary key(doctor_id));
+
+2.create table appointment(appointment_id int(5),doctor_id int(5),appointment_date date,
+appointment_time time,patient_id int(5),reason varchar(20),primary key(appointment_id),foreign key(doctor_id) references doctor(doctor_id),
+foreign key(patient_id) references patient(patient_id));
+
+3.create table schedule(schedule_id int(5) auto_increment,doctor_id int(5),start_time time, end_time time,primary key(schedule_id),foreign key(doctor_id) references doctor(doctor_id));
+
